@@ -5,19 +5,19 @@
 }
 
 :root {
-  --primary-color: #2563eb;
-  --primary-dark: #1e40af;
-  --secondary-color: #0ea5e9;
-  --accent-color: #38bdf8;
-  --text-color: #e2e8f0;
-  --light-text: #94a3b8;
-  --background: #0a0e1a;
-  --section-bg: #0f172a;
-  --card-bg: #1e293b;
-  --gradient-start: #0f172a;
-  --gradient-end: #1e3a8a;
-  --nav-bg: rgba(10, 14, 26, 0.9);
-  --card-border: rgba(37, 99, 235, 0.1);
+  --primary-color: #990000;      /* IU Crimson - for text/buttons */
+  --primary-dark: #7C0A02;       /* Dark crimson */
+  --secondary-color: #EDE4D3;    /* IU Cream - for backgrounds */
+  --accent-color: #C5050C;       /* Light crimson */
+  --text-color: #990000;         /* Crimson text */
+  --light-text: #FFFFFF;         /* White text on crimson backgrounds */
+  --background: #EDE4D3;         /* Cream background */
+  --section-bg: #EDE4D3;         /* Cream sections */
+  --gradient-start: #EDE4D3;     /* Cream to cream (or slight variation) */
+  --gradient-end: #E0D5C0;      /* Slightly darker cream */
+  --nav-bg: rgba(247, 242, 231, 0.95);  /* Cream navbar */
+  --card-bg: rgba(247, 242, 231, 0.95);            /* White cards on cream */
+  --card-border: rgba(153, 0, 0, 0.2);  /* Crimson border */
 }
 
 body {
@@ -394,7 +394,7 @@ body {
 
 .project-card p {
   padding: 0 1.5rem 1rem;
-  color: var(--light-text);
+  color: var(--text-color);
   flex-grow: 1;
   position: relative;
   z-index: 2;
@@ -411,11 +411,11 @@ body {
 
 .project-tech span {
   padding: 0.3rem 0.8rem;
-  background: rgba(56, 189, 248, 0.1);
+  background: #f1eadc;
   border-radius: 50px;
   font-size: 0.8rem;
   color: var(--accent-color);
-  border: 1px solid rgba(56, 189, 248, 0.2);
+  border: 1px solid #990000;
 }
 
 /* Contact Section */

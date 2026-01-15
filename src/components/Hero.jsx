@@ -40,15 +40,13 @@ export const Hero = () => {
           </motion.h1>
           
           <motion.h2 className="hero-subtitle" variants={fadeInUp}>
-            Data Scientist
+            Indiana University
           </motion.h2>
           
           <motion.p className="hero-description" variants={fadeInUp}>
-            I work with data to uncover insights, build predictive models, and
-            drive informed decision-making. I'm proficient in Python, R, SQL, and data
-            visualization tools.
+            Data Science BS | Computer Science & Statistics Minors | May 2026
           </motion.p>
-          
+
           <motion.div className="cta-buttons" variants={staggerContainer}>
             <motion.a
               href="#projects"
@@ -72,11 +70,8 @@ export const Hero = () => {
             <motion.a href="https://github.com/nathankyryk" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-github"></i>
             </motion.a>
-            <motion.a href="https://linkedin.com/in" target="_blank" rel="noopener noreferrer">
+            <motion.a href="https://www.linkedin.com/in/nathan-kyryk-389a54378/" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-linkedin"></i>
-            </motion.a>
-            <motion.a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-twitter"></i>
             </motion.a>
           </motion.div>
         </motion.div>

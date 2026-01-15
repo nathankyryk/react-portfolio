@@ -53,11 +53,11 @@ export const Projects = () => {
           <p>
             Collected data from NBA API and analyzed 3-point shooting trends.
             Useful datasets were created for NBA teams and NBA players from 1996-2024. 
-            <a href="https://nba-app-nk.streamlit.app/" target="_blank" rel="noopener noreferrer" style={{color:"#0ea5e9"}}> <br />Live Demo </a>
+            <a href="https://nba-app-nk.streamlit.app/" target="_blank" rel="noopener noreferrer" style={{color:"#7C0A02"}}> <br />Live Demo </a>
             |
-            <a href="https://nathankyryk.github.io/nba" target="_blank" rel="noopener noreferrer" style={{color:"#0ea5e9"}}> Analysis </a>
+            <a href="https://nathankyryk.github.io/nba" target="_blank" rel="noopener noreferrer" style={{color:"#7C0A02"}}> Analysis </a>
             |
-            <a href="https://github.com/nathankyryk/nba" target="_blank" rel="noopener noreferrer" style={{color:"#0ea5e9"}}> GitHub</a>
+            <a href="https://github.com/nathankyryk/nba" target="_blank" rel="noopener noreferrer" style={{color:"#7C0A02"}}> GitHub</a>
           </p>
           <div className="project-tech">
             <span>Python</span>
@@ -83,9 +83,9 @@ export const Projects = () => {
           <p>
             Stock price analysis over many companies across various industries
             collected using the Google Finance API. Visualized trends and patterns.
-            <a href="https://nathankyryk.github.io/google-finance" target="_blank" rel="noopener noreferrer" style={{color:"#0ea5e9"}}> <br />Analysis </a>
+            <a href="https://nathankyryk.github.io/google-finance" target="_blank" rel="noopener noreferrer" style={{color:"#7C0A02"}}> <br />Analysis </a>
             |
-            <a href="https://github.com/nathankyryk/google_finance" target="_blank" rel="noopener noreferrer" style={{color:"#0ea5e9"}}> GitHub</a>
+            <a href="https://github.com/nathankyryk/google_finance" target="_blank" rel="noopener noreferrer" style={{color:"#7C0A02"}}> GitHub</a>
           </p>
           <div className="project-tech">
             <span>Google Sheets</span>
@@ -112,9 +112,9 @@ export const Projects = () => {
             Application using the OpenWeatherMap API to display current weather
             information and forecasts for any location worldwide. Built with a light
             and dark theme. 
-            <a href="https://nathankyryk.github.io/weather" target="_blank" rel="noopener noreferrer" style={{color:"#0ea5e9"}}> <br />Live Demo </a>
+            <a href="https://nathankyryk.github.io/weather" target="_blank" rel="noopener noreferrer" style={{color:"#7C0A02"}}> <br />Live Demo </a>
             | 
-            <a href="https://github.com/nathankyryk/weather-app" target="_blank" rel="noopener noreferrer" style={{color:"#0ea5e9"}}> GitHub</a>
+            <a href="https://github.com/nathankyryk/weather-app" target="_blank" rel="noopener noreferrer" style={{color:"#7C0A02"}}> GitHub</a>
           </p>
           <div className="project-tech">
             <span>JavaScript</span>
