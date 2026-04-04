@@ -44,7 +44,7 @@ export const Hero = () => {
           </motion.h2>
           
           <motion.p className="hero-description" variants={fadeInUp}>
-            Data Science BS | Computer Science & Statistics Minors | May 2026
+            Data Science student focused on sports analytics, financial data, and applied machine learning. Experienced in building data pipelines, analyzing large datasets, and delivering insights through visualization and dashboards.
           </motion.p>
 
           <motion.div className="cta-buttons" variants={staggerContainer}>
