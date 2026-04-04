@@ -51,8 +51,7 @@ export const Projects = () => {
             </motion.div>
           <h3> NBA 3-Pointer Analysis</h3>
           <p>
-            Collected data from NBA API and analyzed 3-point shooting trends.
-            Useful datasets were created for NBA teams and NBA players from 1996-2024. 
+          Analyzed 30 years of NBA data (6,800+ players) to identify major trends in 3-point shooting. Found a 2–3x increase in 3-point attempts and uncovered relationships between shooting patterns and rebounding distribution. Built full pipeline in Python with data cleaning, statistical analysis, and visualization.
             <a href="https://nba-app-nk.streamlit.app/" target="_blank" rel="noopener noreferrer" style={{color:"#7C0A02"}}> <br />Live Demo </a>
             |
             <a href="https://nathankyryk.github.io/nba" target="_blank" rel="noopener noreferrer" style={{color:"#7C0A02"}}> Analysis </a>
@@ -81,8 +80,7 @@ export const Projects = () => {
           />
           <h3>Google Finance Data Analysis</h3>
           <p>
-            Stock price analysis over many companies across various industries
-            collected using the Google Finance API. Visualized trends and patterns.
+            Developed an interactive Power BI dashboard to analyze financial performance and investment strategies. Automated data ingestion and used SQL window functions for time-series insights. Improved efficiency and enabled dynamic decision-making.
             <a href="https://nathankyryk.github.io/google-finance" target="_blank" rel="noopener noreferrer" style={{color:"#7C0A02"}}> <br />Analysis </a>
             |
             <a href="https://github.com/nathankyryk/google_finance" target="_blank" rel="noopener noreferrer" style={{color:"#7C0A02"}}> GitHub</a>
