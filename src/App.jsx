@@ -30,7 +30,7 @@ function App() {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <p> &copy; 2026 Nathan Kyryk</p>
+        <p> &copy; 2026 Nathan Kyryk. </p>
       </motion.footer>
     </div>
   );
