@@ -30,7 +30,7 @@ function App() {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <p> &copy; Data Science student focused on sports analytics, financial data, and applied machine learning. Experienced in building data pipelines, analyzing large datasets, and delivering insights through visualization and dashboards.</p>
+        <p> &copy; 2026 Nathan Kyryk</p>
       </motion.footer>
     </div>
   );
