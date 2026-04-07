@@ -26,6 +26,10 @@ body {
   background: var(--background);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .app {
   opacity: 0;
   transform: translateY(20px);
@@ -158,8 +162,17 @@ body {
 
 .hero-description {
   font-size: 1.1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   line-height: 1.7;
+}
+
+.hero-tagline {
+  font-size: 0.95rem;
+  margin: 0 auto 2rem;
+  max-width: 640px;
+  line-height: 1.65;
+  color: var(--primary-dark);
+  opacity: 0.92;
 }
 
 .cta-buttons {
@@ -418,6 +431,72 @@ body {
   border: 1px solid #990000;
 }
 
+/* Interests Section */
+
+.interests {
+  padding: 2rem 5% 6rem;
+  background: var(--section-bg);
+}
+
+.interests h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.interests-card {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: var(--card-bg);
+  color: var(--text-color);
+  border: 1px solid var(--card-border);
+  border-left: 4px solid var(--accent-color);
+  border-radius: 1rem;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.interests-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    var(--gradient-start) 0%,
+    var(--gradient-end) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.interests-card:hover::before {
+  opacity: 0.1;
+}
+
+.interests-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  border-color: var(--accent-color);
+  border-left-color: var(--accent-color);
+}
+
+.interests-card p {
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.7;
+  position: relative;
+  z-index: 2;
+}
+
+.interests-card p + p {
+  margin-top: 1rem;
+}
+
 /* Contact Section */
 
 .contact {
@@ -545,8 +624,23 @@ body {
 
 .footer {
   text-align: center;
-  padding: 2rem;
+  padding: 1.5rem 5%;
   background: var(--background);
-  color: var(--text-color);
   border-top: 1px solid var(--card-border);
+}
+
+.footer-legal {
+  font-size: 0.85rem;
+  color: var(--primary-dark);
+  opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+  .interests-card {
+    padding: 1.2rem 1rem;
+  }
+
+  .interests-card p {
+    font-size: 1rem;
+  }
 }

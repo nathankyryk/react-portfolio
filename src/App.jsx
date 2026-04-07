@@ -2,10 +2,10 @@ import "./App.css";
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import { Projects } from "./components/Projects";
+import { Interests } from "./components/Interests";
 import { Contact } from "./components/Contact";
 import { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { motion } from "framer-motion";
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -21,17 +21,12 @@ function App() {
 
       <Hero />
       <Projects />
+      <Interests />
       <Contact />
 
-      <motion.footer
-        className="footer"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-      >
-        <p> &copy; 2026 Nathan Kyryk. </p>
-      </motion.footer>
+      <footer className="footer">
+        <p className="footer-legal">© {new Date().getFullYear()} Nathan Kyryk. All rights reserved.</p>
+      </footer>
     </div>
   );
 }
