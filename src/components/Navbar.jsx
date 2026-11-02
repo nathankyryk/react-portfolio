@@ -1,70 +1,30 @@
-import { motion } from "framer-motion";
-
-const fadeInUp = {
-  initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6 },
-};
-
-const staggerContainer = {
-  animate: {
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-};
+import { useEffect, useState } from "react";
 
 export const Navbar = () => {
-  return (
-    <motion.nav
-      className="navbar"
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-    >
-      <motion.div
-        className="logo"
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-      >
-        Portfolio
-      </motion.div>
+  const [scrolled, setScrolled] = useState(false);
 
-      <motion.ul
-        className="nav-links"
-        variants={staggerContainer}
-        initial="initial"
-        animate="animate"
-      >
-        <motion.li
-          variants={fadeInUp}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <a href="#home"> Home</a>
-        </motion.li>
-        <motion.li
-          variants={fadeInUp}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <a href="#projects"> Projects</a>
-        </motion.li>
-        <motion.li
-          variants={fadeInUp}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <a href="#interests"> Interests</a>
-        </motion.li>
-        <motion.li
-          variants={fadeInUp}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <a href="#contact"> Contact</a>
-        </motion.li>
-      </motion.ul>
-    </motion.nav>
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  return (
+    <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
+      <div className="container navbar-inner">
+        <a href="#home" className="logo">
+          Nathan Kyryk
+        </a>
+        <ul className="nav-links">
+          <li>
+            <a href="#projects">Projects</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
   );
 };

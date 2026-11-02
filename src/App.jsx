@@ -2,32 +2,51 @@ import "./App.css";
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import { Projects } from "./components/Projects";
-import { Interests } from "./components/Interests";
 import { Contact } from "./components/Contact";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { MotionConfig } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
 function App() {
-  const [isLoaded, setIsLoaded] = useState(false);
-
   useEffect(() => {
-    setIsLoaded(true);
     emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
   }, []);
 
   return (
-    <div className={`app ${isLoaded ? "loaded" : ""}`}>
-      <Navbar />
-
-      <Hero />
-      <Projects />
-      <Interests />
-      <Contact />
-
-      <footer className="footer">
-        <p className="footer-legal">© {new Date().getFullYear()} Nathan Kyryk. All rights reserved.</p>
-      </footer>
-    </div>
+    // reducedMotion="user": no fade-ins for visitors who turned animations off.
+    <MotionConfig reducedMotion="user">
+      <div className="app">
+        <Navbar />
+        <main>
+          <Hero />
+          <Projects />
+          <Contact />
+        </main>
+        <footer className="footer">
+          <div className="container footer-inner">
+            <p>© {new Date().getFullYear()} Nathan Kyryk</p>
+            <div className="footer-social">
+              <a
+                href="https://github.com/nathankyryk"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              >
+                <i className="fab fa-github" aria-hidden="true"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/nathan-kyryk-389a54378/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <i className="fab fa-linkedin" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </MotionConfig>
   );
 }
 

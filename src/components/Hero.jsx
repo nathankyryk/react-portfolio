@@ -1,88 +1,74 @@
 import { motion } from "framer-motion";
 
 const fadeInUp = {
-  initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6 },
-};
-
-const staggerContainer = {
-  animate: {
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
+  initial: { opacity: 0, y: 16 },
+  animate: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
 };
 
 export const Hero = () => {
   return (
-    <motion.section
-      id="home"
-      className="hero"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.8, delay: 0.2 }}
-    >
-      <div className="hero-container">
-        <motion.div
-          className="hero-content"
-          variants={staggerContainer}
-          initial="initial"
-          animate="animate"
-        >
-          
-          <motion.h1
-            className="glitch"
-            variants={fadeInUp}
-            whileHover={{ scale: 1.02 }}
-          >
-            Nathan Kyryk
-          </motion.h1>
-          
-          <motion.h2 className="hero-subtitle" variants={fadeInUp}>
-            Indiana University
-          </motion.h2>
-          
-          <motion.p className="hero-description" variants={fadeInUp}>
-            Data Science B.S. | Minors in Computer Science & Statistics | Class of 2026
-          </motion.p>
+    <section id="home" className="hero">
+      <motion.div
+        className="container hero-content"
+        initial="initial"
+        animate="animate"
+        transition={{ staggerChildren: 0.08, delayChildren: 0.1 }}
+      >
+        {/* One span per letter for the hover ripple; screen readers get the aria-label. */}
+        <motion.h1 variants={fadeInUp} className="hero-name" aria-label="Nathan Kyryk">
+          {"Nathan Kyryk".split("").map((ch, i) =>
+            ch === " " ? (
+              <span key={i} className="space" aria-hidden="true" />
+            ) : (
+              <span key={i} className="char" aria-hidden="true">
+                {ch}
+              </span>
+            )
+          )}
+        </motion.h1>
 
-          <motion.p className="hero-tagline" variants={fadeInUp}>
-            Data Science student focused on sports analytics, financial data, and
-            applied machine learning. Experienced in building data pipelines,
-            analyzing large datasets, and delivering insights through visualization
-            and dashboards.
-          </motion.p>
+        <motion.p className="hero-subtitle" variants={fadeInUp}>
+          Machine Learning Scientist
+        </motion.p>
 
-          <motion.div className="cta-buttons" variants={staggerContainer}>
-            <motion.a
-              href="#projects"
-              className="cta-primary"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+        <motion.p className="hero-meta" variants={fadeInUp}>
+          <span>B.S. in Data Science, Indiana University (2026)</span>
+          <span className="sep" aria-hidden="true">·</span>
+          <span>Minors in Computer Science &amp; Statistics</span>
+        </motion.p>
+
+        <motion.p className="hero-tagline" variants={fadeInUp}>
+          My recent projects fine-tune computer vision and language models, score them against
+          strong baselines, and measure what they cost to run.
+        </motion.p>
+
+        <motion.div className="hero-actions" variants={fadeInUp}>
+          <a href="#projects" className="btn btn-primary">
+            View my work
+          </a>
+          <a href="#contact" className="btn btn-secondary">
+            Contact me
+          </a>
+          <span className="hero-social">
+            <a
+              href="https://github.com/nathankyryk"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
             >
-              View My Work
-            </motion.a>
-            <motion.a
-              href="#contact"
-              className="cta-secondary"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              <i className="fab fa-github" aria-hidden="true"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/nathan-kyryk-389a54378/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
             >
-              Contact Me
-            </motion.a>
-          </motion.div>
-          
-          <motion.div className="social-links" variants={staggerContainer}>
-            <motion.a href="https://github.com/nathankyryk" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-github"></i>
-            </motion.a>
-            <motion.a href="https://www.linkedin.com/in/nathan-kyryk-389a54378/" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-linkedin"></i>
-            </motion.a>
-          </motion.div>
+              <i className="fab fa-linkedin" aria-hidden="true"></i>
+            </a>
+          </span>
         </motion.div>
-      </div>
-    </motion.section>
+      </motion.div>
+    </section>
   );
 };
