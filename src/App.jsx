@@ -35,7 +35,7 @@ function App() {
                 <i className="fab fa-github" aria-hidden="true"></i>
               </a>
               <a
-                href="https://www.linkedin.com/in/nathan-kyryk-389a54378/"
+                href="https://www.linkedin.com/in/nathan-kyryk/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
