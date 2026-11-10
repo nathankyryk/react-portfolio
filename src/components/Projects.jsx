@@ -27,12 +27,12 @@ const projects = [
     imagePosition: "top",
     imageAlt: "FilingFigures results viewer: accuracy and cost of six models on the test set",
     description:
-      "Fine-tuned Qwen3.5-4B to extract six financial figures from SEC 10-K filings, scored against each company's own XBRL data on 36 companies it never saw. Ties Qwen3.5-397B, sits 1.2 points behind Claude Opus 5.5, and runs in 4-bit with vLLM.",
+      "Fine-tuned Qwen3.5-4B to extract 12 financial figures from SEC 10-K filings, scored against each company's own XBRL data. It beats Qwen3.5-397B on mid-size companies it never saw. The six-figure version runs in 4-bit for $0.07 per 1,000 filings, about 400x cheaper than Opus.",
     stats: [
-      { value: "98.8%", label: "of figures right (95.4% before fine-tuning)" },
-      { value: "$0.07", label: "per 1,000 filings, about 400x cheaper than Opus" },
+      { value: "99.0%", label: "right on unseen mid-cap companies (86.2% before)" },
+      { value: "98.2%", label: "with GRPO, never shown a correct answer" },
     ],
-    tech: ["PyTorch", "LoRA", "vLLM", "Hugging Face"],
+    tech: ["PyTorch", "LoRA", "GRPO", "vLLM", "Hugging Face"],
     links: [
       { label: "Results viewer", href: "https://huggingface.co/spaces/kyryk/filing-figures" },
       { label: "GitHub", href: "https://github.com/nathankyryk/filing-figures" },
